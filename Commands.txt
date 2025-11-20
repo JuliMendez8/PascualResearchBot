@@ -5,13 +5,13 @@ hugging
 huggingface-cli login
 
 nohup
-nohup ./nohup/run.sh > ./logs/salida.log 2>&1 &
-nohup ./nohup/runBot.sh > ./logs/salidaBot.log 2>&1 &
-nohup ./nohup/Full.sh > ./logs/nohup.log 2>&1 &
-nohup ./nohup/runGLUE.sh > ./logs/salidaGLUE.log 2>&1 
+nohup ./source/nohup/run.sh > ./source/logs/salida.log 2>&1 &
+nohup ./source/nohup/runBot.sh > ./source/logs/salidaBot.log 2>&1 &
+nohup ./source/nohup/Full.sh > ./source/logs/nohup.log 2>&1 &
+nohup ./source/nohup/runGLUE.sh > ./source/logs/salidaGLUE.log 2>&1 
 
-tail -f ./logs/salida.log
-tail -f ./logs/salidaBot.log
+tail -f ./source/logs/salida.log
+tail -f ./source/logs/salidaBot.log
 
 Process
 ps aux | grep Full.sh
